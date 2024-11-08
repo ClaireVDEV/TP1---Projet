@@ -2,21 +2,53 @@ package personnages;
 
 public class Humain {
 	
-	//arguments
+	//attributs
 	private String nom;
-	private String BoissonPref;
-	private float ArgentPossede;
-	
-	//methodes
-	private void nom(type nomvar) {
-		nom = nomvar;
-	}
+	private String boisson;
+	private int argent;
 	
 	//constructeur
-	private Humain() {
-		this.ArgentPossede;
-		this.nom;
-		this.BoissonPref;
+	public Humain(String nom, int argent, String boisson) {
+		this.nom = nom;
+		this.argent = argent;
+		this.boisson = boisson;
+	}
+	
+	//methodes
+	public void parler(String texte) {
+		System.out.println("(< " + this.nom + " >) - " + texte);
+	}
+	
+	public void direBonjour() {
+		String texte="Bonjour ! Je m'appelle" + this.nom + " et j'aime boire du " + this.boisson + "." ;
+		parler(texte);
+	}
+	
+	public void boire() {
+		String texte="Mmmm, un bon verre de " + this.boisson + " ! GLOUPS ! ";
+		parler(texte);
+	}
+	
+	public int getArgent() {
+		return argent;
+	}
+	
+	public String getBoisson() {
+		return boisson;
+	}
+	
+	public String getNom() {
+		return nom;
+	}
+	
+	public void gagnerArgent(int n) {
+		getArgent();
+		this.argent = argent + n;
+	}
+	
+	public void perdreArgent(int n) {
+		getArgent();
+		this.argent = argent - n;
 	}
 
 }
