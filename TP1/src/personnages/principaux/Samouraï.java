@@ -11,7 +11,9 @@ public class Samouraï extends Ronin{
 		this.seigneur = seigneur;
 	}
 	
+	//surcharge humain
 	public void boire(String boisson) {
+		
 		this.parler("Je bois un délicieux " + boisson + " !");
 	}
 

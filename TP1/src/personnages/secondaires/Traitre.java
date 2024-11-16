@@ -1,6 +1,6 @@
 package personnages.secondaires;
 import personnages.Humain;
-import personnages.principaux.Commerçant;
+import personnages.principaux.Commercant;
 import personnages.principaux.Samouraï;
 
 public class Traitre extends Samouraï{
@@ -11,7 +11,7 @@ public class Traitre extends Samouraï{
 		super(nom, boisson, argent, seigneur);
 	}
 
-	public void extorquer(Commerçant commercant) {
+	public void extorquer(Commercant commercant) {
 		if (this.traitrise < 3) {
 			this.gagnerArgent(commercant.getArgent());
 			commercant.perdreArgent(commercant.getArgent());
@@ -30,8 +30,8 @@ public class Traitre extends Samouraï{
 	}
 	
 	public void faireLeGentil(Humain humain, int argent) {
-		if (humain instanceof Commerçant) {
-			Commerçant commercant = (Commerçant) humain;
+		if (humain instanceof Commercant) {
+			Commercant commercant = (Commercant) humain;
 			this.donner(argent, commercant);
 		}else {
 			this.perdreArgent(argent);

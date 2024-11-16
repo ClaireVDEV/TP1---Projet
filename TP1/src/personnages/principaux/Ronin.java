@@ -9,7 +9,7 @@ public class Ronin extends Humain {
 		this.honneur = 1;
 	}
 	
-	public void donner(int n, Commerçant commercant) {
+	public void donner(int n, Commercant commercant) {
 		if (n > 0 && n <= this.getArgent()) {
 			this.perdreArgent(n);
 			commercant.gagnerArgent(n);

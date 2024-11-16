@@ -1,16 +1,16 @@
 package personnages.principaux;
 import personnages.Humain;
 
-public class Commerçant extends Humain {
+public class Commercant extends Humain {
 	
-	public Commerçant(String nom, int argent) {
+	public Commercant(String nom, int argent) {
 		super(nom, argent, "thé");
 	}
 	
 	public int seFaireExtorquer() {
-		int argent = this.getArgent();
-		this.perdreArgent(argent);
-		return argent;
+		this.perdreArgent(this.getArgent());
+		
+		return this.getArgent();
 	}
 
 	public void recevoir(int n) {

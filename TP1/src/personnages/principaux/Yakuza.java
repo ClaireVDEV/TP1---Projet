@@ -19,7 +19,7 @@ public class Yakuza extends Humain{
 		return reputation;
 	}
 
-	public void extorquer(Commerçant commercant) {
+	public void extorquer(Commercant commercant) {
 		this.reputation += 1;
 		this.parler("J'ai extorqué " + commercant.getNom() + " !");
 		
