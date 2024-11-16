@@ -20,12 +20,12 @@ public class Humain {
 	}
 	
 	public void direBonjour() {
-		String texte="Bonjour ! Je m'appelle" + this.nom + " et j'aime boire du " + this.boisson + "." ;
+		String texte = "Bonjour ! Je m'appelle " + this.nom + " et j'aime boire du " + this.boisson + ".";
 		parler(texte);
 	}
 	
 	public void boire() {
-		String texte="Mmmm, un bon verre de " + this.boisson + " ! GLOUPS ! ";
+		String texte = "Mmmm, un bon verre de " + this.boisson + " ! GLOUPS !";
 		parler(texte);
 	}
 	
@@ -42,13 +42,15 @@ public class Humain {
 	}
 	
 	public void gagnerArgent(int n) {
-		getArgent();
-		this.argent = argent + n;
+		this.argent += n;
 	}
 	
 	public void perdreArgent(int n) {
-		getArgent();
-		this.argent = argent - n;
+		if (n>this.argent) {
+			this.argent = 0;
+		}else {
+			this.argent -= n;
+		}
 	}
 
 }
