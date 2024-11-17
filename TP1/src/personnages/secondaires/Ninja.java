@@ -29,7 +29,8 @@ public class Ninja extends Yakuza{
 		this.parler("Ne le dites à personne mais mon clan secret est " + this.getClan() + " " + this.clanSecret + ".");
 	}
 	
-	//surcharger extorquer de Yakuza
+	//surcharge Yakuza
+	@Override
 	public void extorquer(Commercant commercant) {
 		
 		//vérifie combien a rapporté l'extorction

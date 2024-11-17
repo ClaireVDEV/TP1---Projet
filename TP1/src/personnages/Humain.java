@@ -52,5 +52,17 @@ public class Humain {
 			this.argent -= n;
 		}
 	}
+	
+	public interface Guerrier{
+		public void combattre(){
+			
+		}
+	}
+	
+	public interface Pleutre{
+		public void fuir() {
+			
+		}	
+	}
 
 }
